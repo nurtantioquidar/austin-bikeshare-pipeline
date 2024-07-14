@@ -91,8 +91,9 @@ def main(config):
         spark = create_spark_session()
 
         # Calculate the date for the previous day
-        yesterday = datetime.utcnow() - timedelta(days=days_ago)
-        date_str = yesterday.strftime("%Y-%m-%d")
+        # yesterday = datetime.utcnow() - timedelta(days=days_ago)
+        # date_str = yesterday.strftime("%Y-%m-%d")
+        date_str = datetime.strptime(config["date"], "%Y-%m-%d").date()
         logger.info(f"Fetching data for date: {date_str}")
 
         # Query to extract data

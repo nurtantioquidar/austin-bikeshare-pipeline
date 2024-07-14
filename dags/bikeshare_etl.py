@@ -41,10 +41,12 @@ dag = DAG(
 
 
 def extract_data_task(**kwargs):
+    extract_date = (kwargs["execution_date"] - timedelta(days=200)).strftime("%Y-%m-%d")
     config = {
         "bucket_name": kwargs["dag_run"].conf.get(
             "bucket_name", os.environ.get("GCP_GCS_BUCKET")
         ),
+        "date": extract_date,
         "days_ago": kwargs["dag_run"].conf.get("days_ago", 200),
         "limit": kwargs["dag_run"].conf.get("limit", 1000),
     }
