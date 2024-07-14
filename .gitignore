@@ -1,0 +1,89 @@
+.env
+
+# Python
+*.py[cod]
+__pycache__/
+*.so
+
+# Packages
+*.egg
+*.egg-info
+dist
+build
+eggs
+parts
+bin
+var
+sdist
+develop-eggs
+.installed.cfg
+lib
+lib64
+venv/
+env/
+
+# Installer logs
+pip-log.txt
+
+# Unit test / coverage reports
+.coverage
+.tox
+nosetests.xml
+htmlcov/
+
+# Translations
+*.mo
+
+# Mr Developer
+.mr.developer.cfg
+.project
+.pydevproject
+
+# IDEs
+.idea/
+.vscode/
+*.swp
+*.swo
+
+# OS generated files
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
+
+# Airflow
+airflow.db
+airflow.cfg
+unittests.cfg
+logs/
+
+# Docker
+.docker/
+
+# Environment variables
+.env
+
+# Google Cloud credentials
+*.json
+
+# Data files
+*.csv
+*.parquet
+
+# Logs
+*.log
+
+# Temporary files
+*.tmp
+
+# Jupyter Notebook
+.ipynb_checkpoints
+
+# pipenv
+Pipfile.lock
+
+# poetry
+poetry.lock
